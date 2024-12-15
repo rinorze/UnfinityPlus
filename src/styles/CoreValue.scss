@@ -1,0 +1,126 @@
+.coreValues {
+  background-color: white;
+
+  .valuesSection {
+    margin: 0 auto;
+    padding: 4rem 0;
+    width: 90%;
+    overflow: hidden;
+
+    .valuesContainer {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      align-items: center;
+      width: 100%;
+
+      @media (min-width: 990px) {
+        grid-template-columns: 40% 50%;
+      }
+    }
+
+    .valuesImage {
+      img {
+        height: auto;
+        width: 100%;
+      }
+    }
+
+    .valuesContent {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      width: 100%;
+    }
+
+    .valuesHeader {
+      h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #1a1f2c;
+
+        @media (max-width: 768px) {
+          font-size: 2rem;
+        }
+      }
+
+      p {
+        color: #666;
+        line-height: 1.7;
+        font-size: 13px;
+
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
+      }
+    }
+
+    .valuesGrid {
+      display: grid;
+      gap: 1rem;
+
+      @media (min-width: 650px) and (max-width: 990px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (min-width: 990px) {
+        grid-template-columns: auto auto;
+      }
+    }
+
+    .valueItem {
+      display: flex;
+      gap: 0 1rem;
+      align-items: flex-start;
+
+      .valueIcon {
+        padding: 15px;
+        border-radius: 50%;
+        background-color: #fbbf24;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          color: #1a1f2c;
+          width: 35px;
+        }
+      }
+
+      .valueContent {
+        h3 {
+          font-size: 1.25rem;
+          font-weight: 600;
+          margin-bottom: 0.5rem;
+          color: #1a1f2c;
+
+          @media (max-width: 768px) {
+            font-size: 1rem;
+          }
+        }
+
+        p {
+          color: #666;
+          line-height: 1.6;
+          font-size: 12px;
+
+          @media (max-width: 768px) {
+            font-size: 11px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

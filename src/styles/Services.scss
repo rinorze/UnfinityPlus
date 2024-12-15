@@ -1,0 +1,134 @@
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  background-color: white;
+  padding: 100px 0;
+  gap: 20px;
+
+  .text {
+    h1 {
+      color: black;
+      font-size: clamp(32px, 0.3034rem + 3.4783vw, 54px);
+      text-align: center;
+    }
+
+    p {
+      color: rgb(77, 77, 77);
+      width: 65%;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 14px;
+    }
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    justify-content: space-around;
+    width: 80%;
+  }
+
+  .card {
+    margin: 15px;
+    height: 220px;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s;
+  }
+
+  .card-image {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+  }
+
+  .card-content {
+    padding: 0px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: all 0.3s ease;
+  }
+
+  .title-container {
+    position: relative;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    padding: 1%;
+
+    .icon {
+      margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 20px;
+      margin: 0;
+      padding: 20px;
+      transition:
+        opacity 0.8s ease,
+        transform 0.3s ease;
+      color: white;
+      background-color: black;
+    }
+  }
+
+  .new-title {
+    font-size: 25px;
+    color: black;
+  }
+
+  .description {
+    font-size: 14px;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  .overlay {
+    position: absolute;
+    bottom: -100%;
+    right: 0;
+    background-color: #ebb644;
+    color: white;
+    text-align: center;
+    transition: all 0.3s ease;
+    opacity: 0;
+    height: 100%;
+    padding: 10px 15px 0 15px;
+    cursor: pointer;
+  }
+
+  .card:hover .overlay {
+    bottom: 0;
+    opacity: 1;
+  }
+
+  .card:hover .card-content {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  .card:hover .title {
+    opacity: 0;
+  }
+
+  .card:hover .black-overlay {
+    opacity: 0;
+  }
+
+  .card:hover .description {
+    opacity: 1;
+  }
+
+  @media (min-width: 1450px) {
+    .card-container {
+      grid-template-columns: 33.3% 33.3% 33.3%;
+    }
+  }
+}

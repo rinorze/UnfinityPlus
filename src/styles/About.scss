@@ -1,0 +1,96 @@
+.content {
+    background-color: #f3f4f6;
+}
+
+.slider-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px 0;
+    width: 80%;
+    margin: 0 auto;
+
+    .slider-text {
+        width: 45%;
+        h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: black;
+        }
+        p {
+            margin-bottom: 15px;
+            color: #6d6d6d;
+            font-weight: 300;
+        }
+        .signature {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            img {
+                width: 150px;
+                height: auto;
+                margin-right: 10px;
+            }
+
+            .signatureText {
+                display: flex;
+                flex-direction: column;
+
+                p {
+                    padding: 0;
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .slider-image {
+        position: relative;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .main-image {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .thumbnails {
+            display: flex;
+            align-items: center;
+            width: 100%;
+
+            .thumbnail {
+                width: 18%;
+                height: auto;
+                margin-right: 10px;
+                cursor: pointer;
+                border: 2px solid transparent;
+                transition: border 0.3s;
+
+                &:hover {
+                    border: 2px solid #007bff;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        width: 90%;
+
+        .slider-text {
+            width: 100%;
+            text-align: center;
+        }
+
+        .slider-image {
+            width: 100%;
+        }
+    }
+}

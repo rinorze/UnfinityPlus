@@ -1,0 +1,144 @@
+.subscribe {
+    position: relative;
+    background-image: url("../assets/parallax7.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 134px;
+
+    .subscribeBox {
+        display: flex;
+        width: 80%;
+        justify-content: space-around;
+        align-items: center;
+        margin: 0 auto;
+        height: 100%;
+        gap: 30%;
+    }
+
+    .text {
+        z-index: 100;
+        display: flex;
+        flex-direction: column;
+        align-items: baseline;
+        text-align: center;
+        justify-content: baseline;
+
+        h1 {
+            font-size: 25px;
+            color: white;
+            padding: 0 0 10px 0;
+
+            span {
+                color: #ebb644;
+            }
+        }
+
+        .emailBox {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            input {
+                padding: 13px 200px 13px 15px;
+                background-color: white;
+                color: rgb(71, 71, 71);
+                font-weight: 300;
+                border: none;
+                border-radius: 4px 0 0 4px;
+                border: 1px solid white;
+                font-family: "Poppins";
+                width: 100%;
+            }
+
+            input:focus {
+                border: 1px solid #ebb644;
+            }
+
+            button {
+                margin-left: -5px;
+                padding: 13px 30px;
+                border-radius: 4px;
+                border: 1px solid #ebb644;
+                background-color: #ebb644;
+                color: black;
+                font-family: "Poppins";
+                cursor: pointer;
+            }
+        }
+    }
+
+    .img {
+        z-index: 100;
+        padding-top: 10px;
+    }
+}
+
+.subscribe::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+@media (max-width: 768px) {
+    .subscribe {
+        height: auto;
+        padding: 20px 0 0 0;
+
+        .subscribeBox {
+            width: 90%;
+            flex-direction: column;
+            align-items: center;
+            gap: 0px;
+        }
+
+        .text {
+            width: 100%;
+            h1 {
+                font-size: 30px;
+                text-align: left;
+            }
+
+            .emailBox {
+                align-items: center;
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .subscribe {
+        .text {
+            .emailBox {
+                flex-direction: column;
+                gap: 10px;
+                input {
+                    margin: 0;
+                    padding: 0;
+                    height: 40px;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .subscribe {
+        .text {
+            h1 {
+                font-size: 18px;
+            }
+        }
+    }
+}
